@@ -1,0 +1,6 @@
+# Mosquitto data and logs
+data-mosquitto/data/*
+data-mosquitto/log/*
+
+# Mac shit
+.DS_Store
