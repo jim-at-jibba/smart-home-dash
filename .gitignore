@@ -4,3 +4,9 @@ data-mosquitto/log/*
 
 # Mac shit
 .DS_Store
+
+# env
+.env
+
+# postgres
+data-postgres
