@@ -12,9 +12,9 @@ services:
        - "1883:1883"
        - "9001:9001"
     volumes:
-      - ./data-mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
-      - ./data-mosquitto/data:/mosquitto/data
-      - ./data-mosquitto/log:/mosquitto/log
+      - ./broker/data-mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./broker/data-mosquitto/data:/mosquitto/data
+      - ./broker/data-mosquitto/log:/mosquitto/log
   postgres:
     container_name: postgres
     image: postgres
