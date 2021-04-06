@@ -1,6 +1,7 @@
 import express, {NextFunction, Request, Response} from "express"
 import "express-async-errors"
-import logger from "loglevel"
+import {logger} from "./utils/logger"
+import {MQTT} from "./mqtt"
 
 import {getRoutes} from "./routes"
 
@@ -10,6 +11,8 @@ const startServer = ({port = process.env.PORT} = {}) => {
   app.use("/api", getRoutes())
 
   app.use(errorMiddleware)
+
+  MQTT().init()
 
   return new Promise((resolve) => {
     const server = app.listen(port, () => {
