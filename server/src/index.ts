@@ -1,6 +1,6 @@
-import logger from 'loglevel'
-import {startServer} from './start'
+import logger from "loglevel"
+import {startServer} from "./start"
 
-logger.setLevel('info')
+logger.setLevel("info")
 
 startServer()
